@@ -1,0 +1,6 @@
+var vel = 60.5
+console.log(`A VELOCIDADE DO SEU CARRO É ${vel} KM/H`)
+console.log('DIRIJA COM SEGURANÇA')
+if (vel>60){
+console.log('você ultrapassou o limite de velocidade. multado')
+}
