@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Tarefas - App Mobile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="phone">
+
+        <div class="phone-notch">
+
+        </div>
+
+        <div class="app">
+            <div class="status-bar">
+                <span id="clock">21:17</span>
+                <span id="status-icons">📶📡🔋</span>
+            </div>
+            <header class="app-header">
+                <h1>Minhas Tarefas</h1>
+                <button class="theme-toggle" id="theme-toggle" title="alternar tema"
+                    aria-label="alternar tema claro/escuro">🌙</button>
+            </header>
+            <main>
+                <section id="view-task" class="view view-active">
+                    <form id="task-form">
+                        <input type="text" id="task-input" placeholder="Adicionar Tarefa..." maxlength="80"
+                            autocomplete="off" required>
+                    </form>
+                    <select id="task-priority" title="Prioridade">
+                        <option value="baixa">Baixa</option>
+                        <option value="média">Média</option>
+                        <option value="Alta">Alta</option>
+                    </select>
+                    <button type="submit" aria-label="Adicionar tarefa">+</button>
+                    <div class="filters" id="filters">
+                        <button class="filters-btn data-filter='todas'">Todas</button>
+                        <button class="filters-btn data-filter='pendentes'">Pendentes</button>
+                        <button class="filters-btn data-filter='concluidas'">Concluidas</button>
+                    </div>
+                    <ul id="task-list"></ul>
+                    <p id="empty-state" hidden>
+                        <span>📒</span>Nenhuma tarefa por aqui<br />Adicione a primeira tarefa
+                    </p>
+                </section>
+                <section id="view-stats" class="view">
+                    <div class="stats-grid"></div>
+                    <div class="stat-card"></div>
+                    <div class="stat-number" id="stat-total">0</div>
+                    <div class="stat-label">Total</div>
+                </section>
+                <section></section>
+            </main>
+</body>
+
+</html>
